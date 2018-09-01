@@ -1,6 +1,6 @@
-%global commit c7243fb62bef0fa3b889e087c8f8fe513512cc6b
+%global commit 93ae10d1524c951f06fde86662b31ac1e124a5a7
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20180312
+%global commitdate 20180701
 
 %global kodi_addon pvr.filmon
 %global kodi_version 18.0
@@ -9,8 +9,8 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        2.3.3
-Release:        2%{?dist}
+Version:        2.4.2
+Release:        1%{?dist}
 Summary:        FilmOn PVR for Kodi
 
 License:        GPLv2+
@@ -24,7 +24,7 @@ BuildRequires:  kodi-platform-devel >= %{kodi_version}
 BuildRequires:  pkgconfig(jsoncpp)
 BuildRequires:  platform-devel
 Requires:       kodi >= %{kodi_version}
-ExclusiveArch:  i686 x86_64
+ExclusiveArch:  i686 x86_64 aarch64
 
 %description
 %{summary}.
@@ -52,6 +52,10 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Sat Sep 01 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:2.4.2-1
+- Update to 2.4.2
+- Enable aarch64 build
+
 * Thu Jul 26 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:2.3.3-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
