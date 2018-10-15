@@ -10,7 +10,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
 Version:        2.4.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        FilmOn PVR for Kodi
 
 License:        GPLv2+
@@ -24,7 +24,7 @@ BuildRequires:  kodi-platform-devel >= %{kodi_version}
 BuildRequires:  pkgconfig(jsoncpp)
 BuildRequires:  platform-devel
 Requires:       kodi >= %{kodi_version}
-ExclusiveArch:  i686 x86_64 aarch64
+ExcludeArch:    %{power64} ppc64le
 
 %description
 %{summary}.
@@ -52,6 +52,9 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Mon Oct 15 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:2.4.2-2
+- Enable arm build
+
 * Sat Sep 01 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:2.4.2-1
 - Update to 2.4.2
 - Enable aarch64 build
