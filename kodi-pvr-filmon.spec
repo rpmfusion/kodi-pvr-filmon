@@ -10,7 +10,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
 Version:        2.4.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        FilmOn PVR for Kodi
 
 License:        GPLv2+
@@ -52,6 +52,9 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Mon Mar 04 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:2.4.2-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Mon Oct 15 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:2.4.2-2
 - Enable arm build
 
