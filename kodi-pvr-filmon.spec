@@ -48,8 +48,9 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
-* Wed Aug 19 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:5.1.0-1
-- Update to 5.1.0 (switch to Matrix branch)
+* Wed Aug 19 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:5.1.0-3
+- Drop no longer required BR on kodi-platform-devel
+- Update Kodi version
 
 * Tue Aug 18 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:5.1.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
